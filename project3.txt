@@ -1,0 +1,706 @@
+
+#include<graphics.h>
+
+#include<stdio.h>
+
+#include<conio.h>
+
+#include<dos.h>
+
+#include<stdlib.h>
+
+#include<time.h>
+
+char option(void);
+void imp();
+void calc(char,int);
+int i,j,x=58,y=38,c=2,k=0,z=0,t=0,pass=0,a=0,b=0,flag=0;
+double amt=0.0;
+int f=0,q=0,accnum=0;
+int acc=0,gd,gm,p;
+char r;
+int accno[20];
+int pin[20];
+double bal[20];
+char hc,ch;
+int w=0;
+char name[20][30]={"Gurllen Chauhdary",
+"Avishkar sharma",
+"Keshav Aggarwal",
+"Saksham Verma",
+"Simrit Kaur",
+"Akshay Minglani",
+"Mayank Satija",
+"Shivank khanduja",
+"Manas Tyagi",
+"Pulkit Manchanda",
+"Madhur Bansal",
+"Mayank Kakkar",
+"Anshul Tiwari",
+"Saurav Singh",
+"Nilesh Saxena",
+"Mohit Garg",
+"Mukul garg",
+"Subash Kumar Suman",
+"Harsh Patwari",
+"Nischal Alagh"};
+
+void main()
+{
+pin[0]= 1211;
+pin[1]= 1221;
+pin[2]= 1231;
+pin[3]= 1241;
+pin[4]= 1251;
+pin[5]= 1261;
+pin[6]= 1271;
+pin[7]= 1281;
+pin[8]= 1291;
+pin[9]= 1311;
+pin[10]= 1321;
+pin[11]= 1331;
+pin[12]= 1341;
+pin[13]= 1351;
+pin[14]= 1361;
+pin[15]= 1371;
+pin[16]= 1381;
+pin[17]= 1391;
+pin[18]= 1411;
+pin[19]= 1421;
+
+bal[0]= 234232.23;
+bal[1]= 54878.17;
+bal[2]= 324242.13;
+bal[3]= 24334.56;
+bal[4]= 9786.00;
+bal[5]= 45678.99;
+bal[6]= 77945.14;
+bal[7]= 98564.21;
+bal[8]= 78945.55;
+bal[9]= 8135.25;
+bal[10]=889854.64;
+bal[11]=98541.11;
+bal[12]=75654.23;
+bal[13]=14.99;
+bal[14]=9998.28;
+bal[15]=63136.88;
+bal[16]=89712.20;
+bal[17]=945.21;
+bal[18]=1123331.10;
+bal[19]=974512.38;
+
+accno[0]= 100000;
+accno[1]= 100001;
+accno[2]= 100002;
+accno[3]= 100003;
+accno[4]= 100004;
+accno[5]= 100005;
+accno[6]= 100006;
+accno[7]= 100007;
+accno[8]= 100008;
+accno[9]= 100009;
+accno[10]=100010;
+accno[11]=100011;
+accno[12]=100012;
+accno[13]=100013;
+accno[14]=100014;
+accno[15]=100015;
+accno[16]=100016;
+accno[17]=100017;
+accno[18]=100018;
+accno[19]=100019;
+
+gd=DETECT,gm;
+initgraph(&gd,&gm,"C:\\TurboC3\\BGI");
+
+settextstyle(1,HORIZ_DIR,6);
+outtextxy(20,20,"COMPILER WORKING :)");
+settextstyle(1,HORIZ_DIR,4);
+sound(1500);
+delay(300);
+nosound();
+delay(100);
+outtextxy(20,300,"PRESS");
+outtextxy(80,340,"ANY");
+outtextxy(140,380,"KEY");
+sound(1000);
+delay(200);
+nosound();
+delay(200);
+
+getch();
+
+for(i=0;i<=100;i+=10)
+{
+cleardevice();
+setfillstyle(WIDE_DOT_FILL,RED);
+setcolor(RED);
+if(i==0)
+{
+sound(2000);
+delay(200);
+nosound();
+}
+circle(10+i,10,20);
+floodfill(10+i+1,11,4);
+circle(620-i,10,20);
+floodfill(620-i+1,11,4);
+circle(10+i,460,20);
+floodfill(10+i+1,461,4);
+circle(620-i,460,20);
+floodfill(620-i+1,461,4);
+delay(200);
+}
+sound(1000);
+delay(300);
+nosound();
+setfillstyle(WIDE_DOT_FILL,GREEN);
+for(i=0;i<=100;i+=10)
+{
+cleardevice();
+setcolor(2);
+circle(110,10+i,15);
+floodfill(111,10+i+1,2);
+circle(520,10+i,15);
+floodfill(521,10+i+1,2);
+circle(110,460-i,15);
+floodfill(111,460-i+1,2);
+circle(520,460-i,15);
+floodfill(521,460-i+1,2);
+delay(200);
+}
+
+setfillstyle(WIDE_DOT_FILL,11);
+sound(500);
+delay(400);
+nosound();
+for(i=0,j=2;i<=205;i+=5,j+=3)
+{
+ if(i==200)
+ {
+ sound(400);
+ delay(500);
+ nosound();
+  }
+  cleardevice();
+  setcolor(11);
+  circle(110+i,110+j,10);
+  floodfill(110+i+1,110+j+1,11);
+  circle(520-i,110+j,10);
+  floodfill(520-i+1,110+j+1,11);
+  circle(110+i,360-j,10);
+  floodfill(110+i+1,360-j+1,11);
+  circle(520-i,360-j,10);
+  floodfill(520-i+1,360-j+1,11);
+  delay(100);
+}
+
+cleardevice();
+for(j=0;j<=102;j++)
+{
+x+=2;
+y+=2;
+c+=2;
+for(i=0;i<=100;i++)
+{
+putpixel(x+i,y,4);
+putpixel(600-x+i,y,4);
+putpixel(340+i-c,240+c,4);
+putpixel(260+i+c,240+c,4);
+setcolor(random(16));
+circle(350,280,random(50));
+}
+delay(100);
+}
+
+delay(700);
+
+cleardevice();
+settextstyle(SANS_SERIF_FONT,HORIZ_DIR,7);
+outtextxy(70,40,"P");
+delay(550);
+sound(300);
+delay(200);
+  nosound();
+  outtextxy(140,40,"R");
+  delay(550);
+  sound(300);
+delay(200);
+nosound();
+  outtextxy(200,40,"O");
+  delay(550);
+  sound(300);
+delay(200);
+  nosound();
+  outtextxy(260,40,"J");
+  delay(550);
+  sound(300);
+delay(200);
+nosound();
+
+  outtextxy(320,40,"E");
+  delay(550);
+  sound(300);
+ delay(200);
+ nosound();
+
+  outtextxy(380,40,"C");
+  delay(550);
+  sound(300);
+delay(200);
+nosound();
+  outtextxy(440,40,"T");
+  delay(550);
+  sound(300);
+delay(200);
+nosound();
+  settextstyle(TRIPLEX_FONT,HORIZ_DIR,30);
+  setcolor(WHITE);
+  outtextxy(230,140,"X");
+  sound(200);
+  delay(300);
+  nosound();
+  delay(550);
+
+  settextstyle(SANS_SERIF_FONT,HORIZ_DIR,7);
+
+  setcolor(RED);
+
+  outtextxy(55,300,"PRODUCTIONS");
+  sound(500);
+  delay(200);
+  nosound();
+  delay(500);
+
+  settextstyle(DEFAULT_FONT,HORIZ_DIR,4);
+   setcolor(4);
+  outtextxy(200,400,"PRESENTS");
+  sound(150);
+  delay(300);
+  nosound();
+  delay(600);
+
+  settextstyle(7,HORIZ_DIR,5);
+  setfillstyle(SOLID_FILL,RED);
+  for(i=0;i<=240;i+=5)
+  {
+  setcolor(4);
+  outtextxy(500,480-i,"A");
+  outtextxy(550,480-i,"M");
+  outtextxy(525,i,"T");
+  delay(100);
+
+  if(i<=235)
+  {
+  setcolor(0);
+  outtextxy(500,480-i,"A");
+  outtextxy(550,480-i,"M");
+  outtextxy(525,i,"T");
+  }
+  }
+  delay(2000);
+
+  cleardevice();
+  i=0;
+  setfillstyle(SOLID_FILL,10);
+  setbkcolor(10);
+  setfillstyle(SOLID_FILL,4);
+  settextstyle(1,HORIZ_DIR,5);
+  setcolor(4);
+  rectangle(0,0,640,480);
+
+  rectangle(20,20,620,460);
+  floodfill(10,10,4);
+  settextstyle(7,HORIZ_DIR,3);
+  outtextxy(40,60,"WELCOME TO HI-TECH ATM");
+  settextstyle(1,HORIZ_DIR,3);
+  setcolor(4);
+  outtextxy(40,200,"PLACE YOUR ATM CARD HERE");
+  rectangle(40,250,400,400);
+  delay(5000);
+  while(flag!=1)
+  {
+   imp();
+  }
+  cleardevice();
+  setcolor(RED);
+  setbkcolor(YELLOW);
+  settextstyle(7,HORIZ_DIR,5);
+  outtextxy(250,50,"WELCOME");
+  getch();
+  cleardevice();
+  setbkcolor(10);
+  while(w!=1)
+  {
+   hc=option();
+
+   calc(hc,p);
+  }
+  setfillstyle(SOLID_FILL,RED);
+  setbkcolor(YELLOW);
+  settextstyle(7,HORIZ_DIR,4);
+  setcolor(4);
+  outtextxy(250,80,"THANK YOU");
+  outtextxy(180,160,"HAVE A NICE DAY");
+  setcolor(4);
+  circle(300,290,60);
+  circle(280,260,2);
+  floodfill(281,261,4);
+  circle(320,260,2);
+  floodfill(321,261,4);
+  arc(300,280,200,340,30);
+  getch();
+  cleardevice();
+  for(i=0;i<=160;i+=20)
+  {
+     setcolor(RED);
+     outtextxy(40,10+i,"P");
+     delay(200);
+     if(i<=140)
+     {
+      setcolor(YELLOW);
+      outtextxy(40,10+i,"P");
+     }
+  }
+  for(i=0;i<=160;i+=20)
+  {
+      setcolor(RED);
+     outtextxy(60,10+i,"R");
+     delay(200);
+     if(i<=140)
+     {
+      setcolor(YELLOW);
+      outtextxy(60,10+i,"R");
+     }
+  }
+  for(i=0;i<=160;i+=20)
+  {
+      setcolor(RED);
+     outtextxy(80,10+i,"E");
+     delay(200);
+     if(i<=140)
+     {
+      setcolor(YELLOW);
+      outtextxy(80,10+i,"E");
+
+     }
+   }
+   for(i=0;i<=160;i+=20)
+   {
+      setcolor(RED);
+     outtextxy(100,10+i,"P");
+     delay(200);
+     if(i<=140)
+     {
+      setcolor(YELLOW);
+      outtextxy(100,10+i,"P");
+     }
+   }
+   for(i=0;i<=160;i+=20)
+   {
+      setcolor(RED);
+     outtextxy(120,10+i,"A");
+     delay(200);
+     if(i<=140)
+     {
+      setcolor(YELLOW);
+      outtextxy(120,10+i,"A");
+     }
+   }
+    for(i=0;i<=160;i+=20)
+    {
+      setcolor(RED);
+     outtextxy(140,10+i,"R");
+     delay(200);
+     if(i<=140)
+     {
+      setcolor(YELLOW);
+      outtextxy(140,10+i,"R");
+     }
+    }
+    for(i=0;i<=160;i+=20)
+    {
+      setcolor(RED);
+     outtextxy(160,10+i,"E");
+     delay(200);
+     if(i<=140)
+     {
+      setcolor(YELLOW);
+      outtextxy(160,10+i,"E");
+     }
+    }
+     for(i=0;i<=160;i+=20)
+     {
+      setcolor(RED);
+      outtextxy(180,10+i,"D");
+      delay(200);
+      if(i<=140)
+      {
+      setcolor(YELLOW);
+      outtextxy(180,10+i,"D");
+      }
+     }
+     for(i=0;i<=160;i+=20)
+     {
+      setcolor(RED);
+      outtextxy(220,10+i,"B");
+      delay(200);
+      if(i<=140)
+      {
+      setcolor(YELLOW);
+      outtextxy(220,10+i,"B");
+      }
+     }
+      for(i=0;i<=160;i+=20)
+      {
+      setcolor(RED);
+      outtextxy(240,10+i,"Y");
+      delay(200);
+      if(i<=140)
+      {
+      setcolor(YELLOW);
+      outtextxy(240,10+i,"Y");
+      }
+     }
+     outtextxy(260,180,"--");
+     outtextxy(240,220,"NIKUNJ GOEL");
+     outtextxy(240,250,"PRATEEK BHARGAV");
+
+
+  getch();
+  closegraph();
+}
+  void imp()
+  {
+  pass=0;
+  z=0;
+  ch='x';
+  cleardevice();
+  settextstyle(1,HORIZ_DIR,1);
+  outtextxy(100,440,"*input is being displayed at the top left corner");
+  outtextxy(100,80,"ENTER ACC NO");
+  scanf("%d",&acc);
+  outtextxy(100,120,"ENTER PIN");
+ while(ch!=13)
+{
+ ch=getch();
+ if(ch!=13 && ch!=8)
+ {
+ outtextxy(4+z,10,"*");
+ z+=9;
+ t=ch;
+ t=t-48;
+ pass=pass*10+t;
+}
+}
+  for(i=0;i<20;i++)
+  {
+      if(acc==accno[i] && pass==pin[i])
+      {
+	     p=i;
+	     flag=1;
+	     break;
+      }
+      else
+      {
+	flag=0;
+      }
+   }
+ // if(flag==0)
+  //{
+  //imp();
+ // }
+  cleardevice();
+  }
+
+char option()
+{
+  char c;
+  settextstyle(1,HORIZ_DIR,1);
+  setcolor(1);
+  outtextxy(60,20,"PRESS");
+
+  rectangle(60,80,260,140);
+  outtextxy(80,100,"1.WITHDRAWL");
+
+  rectangle(320,80,520,140);
+  outtextxy(330,100,"2.BALANCE ENQUIRY");
+
+  rectangle(60,180,260,240);
+  outtextxy(80,200,"3.DEBIT");
+
+  rectangle(320,180,520,240);
+  outtextxy(330,200,"4.TRANSFER MONEY");
+
+  rectangle(60,280,260,340);
+  outtextxy(80,300,"5.CHANGE PIN");
+  c=getch();
+
+  cleardevice();
+  return c;
+}
+void calc(char hc,int p)
+{ int pinn;
+  char r;
+  q=0;
+  switch(hc)
+  {
+     case '1':
+     printf("Initial Amount Is  %lf\n",bal[p]);
+     printf("Enter The Amount To Be Withdrawn");
+     scanf("%lf",&amt);
+     if((bal[p]-amt)>=500)
+     {
+     bal[p]=bal[p]-amt;
+     printf("Withdrawl Amount Is   %lf\n",amt);
+     printf("Balance Is            %lf\n",bal[p]);
+	   }
+	   else
+	   {
+	     printf("Unsufficient Balance\n");
+
+	   }
+	   printf("Do you want to return to home Page \n");
+	    printf("Press 0 for Yes OR  1 for No \n");
+	   scanf("%d",&w);
+	  /* printf("Press Y for Yes OR  N for No \n");
+	   scanf("%c",r);
+	   if(r=='y')
+	   {
+	   w=0;
+	   }
+	   else
+	   {
+	   w=1;
+	   }*/
+	   break;
+
+
+   case '2':
+	    printf("%s\n",name[p]);
+
+	    printf("%2.2lf\n",bal[p]);
+
+	    printf("Do you want to return to home Page \n");
+
+	   printf("Press 0 for Yes OR  1 for No \n");
+	   scanf("%d",&w);
+	   printf("%d",w);
+	  /* if(r=='y')
+	   {
+	   flag=0;
+	   }
+	   else
+	   {
+	   flag=1;
+	   }
+	   printf("%c",r);
+	   printf("%d",flag); */
+	   break;
+
+   case '3':
+	    printf("Enter The Amount To Be Credited\n");
+
+	    scanf("%lf",&amt);
+	    bal[p]=bal[p]+amt;
+	    printf("New Balance Is   %lf\n",bal[p]);
+	    printf("Do you want to return to home Page \n");
+	    printf("\n");
+	     printf("Press 0 for Yes OR  1 for No \n");
+	   scanf("%d",&w);
+	  /* printf("Press Y for Yes OR  N for No \n");
+	   scanf("%c",r);
+	   if(r=='y')
+	   {
+	   w=0;
+	   }
+	   else
+	   {
+	   w=1;
+	   }*/
+	   break;
+
+   case '4':
+	    printf("Enter Benefeciary's Account Number\n");
+	    scanf("%d",&accnum);
+
+	    for(i=0;i<20;i++)
+	    {
+	       if(accnum==accno[i])
+	       {
+		  f=1;
+		  q=i;
+		  break;
+	       }
+	    }
+	    if(f==1)
+	    {
+		printf("Enter the Amount To Be Transferred\n");
+		scanf("%d",&amt);
+		bal[p]=bal[p]-amt;
+		bal[q]=bal[q]+amt;
+		printf("Balance of %s Is %lf\n",name[p],bal[p]);
+		printf("Balane of %s Is %lf\n",name[q],bal[q]);
+	    }
+	    else
+	    {
+	      printf("Incorrect Account Number\n");
+	    }
+	    printf("Do you want to return to home Page \n");
+	    printf("\n");
+	     printf("Press 0 for Yes OR  1 for No \n");
+	   scanf("%d",&w);
+	 /*  printf("Press Y for Yes OR  N for No \n");
+	   scanf("%c",r);
+	   if(r=='y')
+	   {
+	   w=0;
+	   }
+	   else
+	   {
+	   w=1;
+	   }*/
+	    break;
+   case '5':
+   printf("Enter original Pin\n");
+	    scanf("%d",&pinn);
+	    for(i=0;i<20;i++)
+	    {
+	      if(pinn==pin[i])
+	      {
+		printf("Enter new Pin");
+		scanf("%d",&pass);
+		printf("Confirm Pin");
+		scanf("%d",&pinn);
+		if(pass==pinn)
+		{
+		  pin[i]=pinn;
+		}
+	      }
+	    }
+	    printf("New Pin Is  %d",pinn);
+	    printf("Do you want to return to home Page \n");
+	    printf("\n");
+	     printf("Press 0 for Yes OR  1 for No \n");
+	   scanf("%d",&w);
+	  /* printf("Press Y for Yes OR  N for No \n");
+	   scanf("%c",r);
+	   if(r=='y')
+	   {
+	   w=0;
+	   }
+	   else
+	   {
+	   w=1;
+	   }*/
+	   break;
+   default:
+   printf("Incorrect Choice\n");
+	  printf("Do you want to return to home Page \n");
+	   printf("Press 0 for Yes OR  1 for No \n");
+	   scanf("%d",&w);
+	  break;
+
+  }
+  cleardevice();
+}
